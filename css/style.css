@@ -138,4 +138,101 @@ tbody tr:nth-child(even) {
 .card.income span { color: #28a745; }
 .card.expense span { color: #dc3545; }
 .card.balance span { color: #000; }
+.summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
 
+.summary .card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  padding: 20px 30px;
+  border-radius: 12px;
+  min-width: 180px;
+  text-align: center;
+}
+
+.summary h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.summary span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.card.income span { color: #28a745; }
+.card.expense span { color: #dc3545; }
+.card.balance span { color: #000; }
+.summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.summary .card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  padding: 20px 30px;
+  border-radius: 12px;
+  min-width: 180px;
+  text-align: center;
+}
+
+.summary h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.summary span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.card.income span { color: #28a745; }
+.card.expense span { color: #dc3545; }
+.card.balance span { color: #000; }
+.stock-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.stock-form input,
+.stock-form select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.stock-form button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.stock-form button:hover {
+  opacity: 0.85;
+}
+
+td[data-stock="in"] {
+  color: #28a745;
+  font-weight: bold;
+}
+
+td[data-stock="out"] {
+  color: #dc3545;
+  font-weight: bold;
+}
