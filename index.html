@@ -90,6 +90,36 @@
     </thead>
     <tbody></tbody>
   </table>
+<div class="content">
+  <h1>📦 Stock Management</h1>
+  <p>পণ্য ও মজুত হিসাব</p>
+</div>
+
+<form id="stock-form" class="stock-form">
+  <input type="text" id="product" placeholder="Product name" required />
+
+  <input type="number" id="qty" placeholder="Quantity" required />
+
+  <select id="stock-type">
+    <option value="in">Stock In</option>
+    <option value="out">Stock Out</option>
+  </select>
+
+  <button type="submit">Add</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="stock-body"></tbody>
+</table>
+
 </section>
 <canvas id="network"></canvas>
 <script src="js/background.js"></script>
