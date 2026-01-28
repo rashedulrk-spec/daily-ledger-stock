@@ -1,0 +1,61 @@
+<!--
+================================================
+FILE: index.html
+WHY THIS FILE EXISTS:
+- পুরো সিস্টেমের entry point
+- Admin এবং User দুইজনই এখান থেকে login করবে
+- কোন role হলে কোথায় যাবে সেটা JS ঠিক করবে
+================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ai Tec POS Login</title>
+
+  <!-- Responsive support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Login UI style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+LOGIN BOX
+WHY:
+- এখানে username/password নেওয়া হবে
+-->
+<div class="login-box">
+  <h1>Ai Tec POS</h1>
+
+  <!--
+  LOGIN FORM
+  WHY:
+  - JS এই form submit ধরে verify করবে
+  -->
+  <form id="loginForm">
+    <input id="username" placeholder="Username" required>
+    <input id="password" type="password" placeholder="Password" required>
+
+    <!--
+    ROLE SELECT
+    WHY:
+    - Admin না User সেটা আলাদা করার জন্য
+    -->
+    <select id="role">
+      <option value="admin">Admin</option>
+      <option value="user">Business User</option>
+    </select>
+
+    <button>Login</button>
+  </form>
+
+  <!-- Error / message দেখানোর জায়গা -->
+  <p id="msg"></p>
+</div>
+
+<!-- Login logic -->
+<script src="js/auth.js"></script>
+</body>
+</html>

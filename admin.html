@@ -1,0 +1,72 @@
+<!--
+================================================
+FILE: admin.html
+WHY THIS FILE EXISTS:
+- Admin এখান থেকে user বানাবে
+- Permission tick করে দিবে
+================================================
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<h2>👑 Admin Dashboard</h2>
+<!--
+BUSINESS CREATE
+WHY:
+- আলাদা দোকান / ব্যবসা বানানোর জন্য
+-->
+<h3>Create Business</h3>
+<form id="bizForm">
+  <input id="bizName" placeholder="Business Name" required>
+  <button>Create Business</button>
+</form>
+
+<hr>
+
+<!--
+USER CREATE FORM
+WHY:
+- নতুন business user বানানোর জন্য
+-->
+<form id="userForm">
+  <input id="uName" placeholder="Username" required>
+  <input id="uPass" placeholder="Password" required>
+<!--
+BUSINESS SELECT
+WHY:
+- User কে নির্দিষ্ট business assign করার জন্য
+-->
+  <!-- Permission checkbox -->
+  <label><input type="checkbox" id="pSale"> Sale</label>
+  <label><input type="checkbox" id="pStock"> Stock</label>
+  <label><input type="checkbox" id="pProfit"> Profit</label>
+
+  <button>Create User</button>
+
+<select id="bizSelect"></select>
+
+</form>
+
+<!-- User list -->
+<table>
+  <thead>
+    <tr><th>User</th><th>Permissions</th></tr>
+  </thead>
+  <tbody id="userList"></tbody>
+</table>
+<!--
+WHY:
+- Admin যেন নিজে license activate করতে পারে
+-->
+<button onclick="activateMonthlyLicense()">
+  Activate Monthly License
+</button>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
