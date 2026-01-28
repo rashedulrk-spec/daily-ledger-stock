@@ -1,0 +1,4 @@
+localStorage.setItem("license", JSON.stringify({
+  type: "monthly",
+  expire: new Date().setMonth(new Date().getMonth() + 1)
+}));
