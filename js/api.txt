@@ -1,0 +1,4 @@
+/*
+Future:
+fetch("https://api.aitec.com/verify?key=XXXX")
+*/
